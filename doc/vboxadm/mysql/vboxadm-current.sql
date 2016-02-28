@@ -203,6 +203,7 @@ CREATE TABLE `mailboxes` (
   `sa_kill_score` decimal(5,2) NOT NULL DEFAULT '6.31',
   `pw_ts` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `pw_lock` tinyint(1) NOT NULL DEFAULT '0',
+  `catchall` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `domain_id` (`domain_id`,`local_part`),
   KEY `vacation_duration` (`vacation_start`,`vacation_end`),
